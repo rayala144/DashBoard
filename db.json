@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "Rayala",
+      "lastName": "Akhil",
+      "mobile": "9182674883",
+      "salary": "70000"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
