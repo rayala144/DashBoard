@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms'
+import { TranslateService } from '@ngx-translate/core';
 import { ApiService } from '../shared/api.service';
 import { EmployeeModel } from './employee-dashboard.model';
 
@@ -14,7 +15,8 @@ export class EmployeeDashBoardComponent implements OnInit {
   employeeData !: any;
   showSubmit !: boolean;
   showUpdate !: boolean;
-  constructor(private formbuilder : FormBuilder, private api : ApiService) {}
+  
+  constructor(private formbuilder : FormBuilder, private api : ApiService, public translateService: TranslateService) {}
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
       firstName : [''],
@@ -43,6 +45,10 @@ export class EmployeeDashBoardComponent implements OnInit {
       alert("Something went wrong!")
     }
     )
+  }
+
+  public changeLanguage(language: string): void {
+    this.translateService.use(language);
   }
 
   getAllEmployeeData(){

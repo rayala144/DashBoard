@@ -1,0 +1,16 @@
+{
+    "title-heading": "Employee Entry Form",
+    "language": "Language",
+    "add-employee": "Add employee",
+    "employee-id": "ID",
+    "first-name": "First Name",
+    "last-name": "Last Name",
+    "mobile-no": "Mobile No.",
+    "salary": "Salary",
+    "action": "Action",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close",
+    "submit": "Submit",
+    "update": "Update"
+}

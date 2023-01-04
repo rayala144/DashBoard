@@ -1,6 +1,31 @@
 <nav class="navbar navbar-light bg-primary">
   <div class="container-fluid">
-    <h1 style="color: aliceblue">Employee Dashboard</h1>
+    <h1
+      style="
+        font-family:'Lucida Sans';
+        color: aliceblue;
+        font-size: x-large;
+      "
+    >
+      {{ "title-heading" | translate: {} }}
+    </h1>
+    
+
+    <div class="dropdown">
+      <button
+        class="btn btn-primary dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        {{ "language" | translate: {} }}
+      </button>
+      <ul class="dropdown-menu">
+        <li><button class="dropdown-item" type="button" (click)="changeLanguage('en-US')" [class.active]="translateService.currentLang !== 'pt-BR'">English</button></li>
+        <li><button class="dropdown-item" type="button" (click)="changeLanguage('pt-BR')" [class.active]="translateService.currentLang === 'pt-BR'">Português</button></li>
+      </ul>
+    </div>
+    
     <div class="d-flex">
       <button
         type="button"
@@ -9,21 +34,21 @@
         data-bs-target="#exampleModal"
         class="btn btn-success"
       >
-        Add Employee
+        {{ "add-employee" | translate: {} }}
       </button>
     </div>
   </div>
 </nav>
 
-<table class="table mt-3">
+<table class="table mt-3; table table-hover table-striped table-bordered">
   <thead>
     <tr>
-      <th scope="col">Employee ID</th>
-      <th scope="col">First name</th>
-      <th scope="col">Last name</th>
-      <th scope="col">Mobile No</th>
-      <th scope="col">Salary</th>
-      <th scope="col">Action</th>
+      <th scope="col">{{ "employee-id" | translate: {} }}</th>
+      <th scope="col">{{ "first-name" | translate: {} }}</th>
+      <th scope="col">{{ "last-name" | translate: {} }}</th>
+      <th scope="col">{{ "mobile-no" | translate: {} }}</th>
+      <th scope="col">{{ "salary" | translate: {} }}</th>
+      <th scope="col">{{ "action" | translate: {} }}</th>
     </tr>
   </thead>
   <tbody>
@@ -42,10 +67,10 @@
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
-          Edit
+        {{ "edit" | translate: {} }}
         </button>
         <button (click)="clearEmployee(row)" class="btn btn-danger mx-3">
-          Delete
+            {{ "delete" | translate: {} }}
         </button>
       </td>
     </tr>
@@ -64,7 +89,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">
-          Employee Details
+            {{ "employee-details" | translate: {} }}
         </h1>
         <button
           type="button"
@@ -127,7 +152,7 @@
           class="btn btn-secondary"
           data-bs-dismiss="modal"
         >
-          Close
+        {{ "close" | translate: {} }}
         </button>
         <button
           type="button"
@@ -135,7 +160,7 @@
           (click)="postEmployeeDetails()"
           class="btn btn-primary"
         >
-          Submit
+        {{ "submit" | translate: {} }}
         </button>
         <button
           type="button"
@@ -143,7 +168,7 @@
           (click)="updateEmployeeDetails()"
           class="btn btn-primary"
         >
-          Update
+        {{ "update" | translate: {} }}
         </button>
       </div>
     </div>

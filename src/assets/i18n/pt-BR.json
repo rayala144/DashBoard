@@ -1,0 +1,16 @@
+{
+    "title-heading": "Formulário de Entrada de Empregado",
+    "language": "Língua",
+    "add-employee": "Adicionar funcionário",
+    "employee-id": "ID",
+    "first-name": "Primeiro nome",
+    "last-name": "Último nome",
+    "mobile-no": "Número do celular",
+    "salary": "Salário",
+    "action": "Ação",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "close": "Perto",
+    "submit": "Enviar",
+    "update": "Atualizar"
+}
